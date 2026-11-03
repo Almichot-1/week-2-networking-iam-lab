@@ -3,7 +3,10 @@
 Ahmed Yassin Ahmed · Group 2 · Completed 3 November 2026
 
 ## Network inspection
-The requested `ip -4 addr` command returned `Cannot open netlink socket: Operation not permitted`. A Linux interface ioctl and the kernel route table provided the measurements below. The lab ran on Ubuntu 24.04.3 LTS. The only visible IPv4 interface was loopback, `127.0.0.1/8`. A process can use it to contact another service in the same network namespace. It is a special-purpose address, distinct from an RFC 1918 private LAN address. The IPv4 route table had no default gateway. External HTTPS was available through the environment's proxy. These observations describe the lab runner.
+
+The laptop runs Omarchy (Arch Linux). Its Wi-Fi interface `wlp0s20f3` has the local IPv4 address `10.2.68.139/20` and uses `10.2.64.1` as the default gateway. The address is private because it falls within the RFC 1918 range `10.0.0.0/8`. The /20 mask is `255.255.240.0`, so the laptop and gateway share the subnet `10.2.64.0/20`.
+
+These laptop readings were supplied by Ahmed. The command transcripts in `evidence/` were captured in a separate Ubuntu lab environment.
 
 ## Divide 10.0.0.0/24 into four equal subnets
 Borrowing two host bits gives four prefixes of length 26. Six host bits remain, so each block spans 64 addresses. A conventional IPv4 LAN has 62 usable hosts. An ordinary AWS VPC subnet reserves its first four addresses and its last one, leaving 59 assignable addresses.
