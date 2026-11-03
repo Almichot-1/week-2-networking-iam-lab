@@ -1,0 +1,8 @@
+PRETTY_NAME="Ubuntu 24.04.3 LTS"
+lo 127.0.0.1/8
+Default IPv4 gateway: none visible
+10.0.0.0/26 hosts 10.0.0.1 to 10.0.0.62 broadcast 10.0.0.63 AWS assignable 59
+10.0.0.64/26 hosts 10.0.0.65 to 10.0.0.126 broadcast 10.0.0.127 AWS assignable 59
+10.0.0.128/26 hosts 10.0.0.129 to 10.0.0.190 broadcast 10.0.0.191 AWS assignable 59
+10.0.0.192/26 hosts 10.0.0.193 to 10.0.0.254 broadcast 10.0.0.255 AWS assignable 59
+PASS: four /26s cover the /24; IAM document grants only the intended object read.
